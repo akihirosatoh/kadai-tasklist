@@ -2,6 +2,10 @@
 
 <%= form_for(@task) do |t| %>
 
+<%= t.label :status, '状態' %>
+
+<%= t.text_field :status %>
+
 <%= t.label :content, '予定' %>
 
 <%= t.text_field :content %>
