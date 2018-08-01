@@ -22,6 +22,7 @@ class TaskManagersController < ApplicationController
   end
   
   private
+  
   def task_manager_params
   params.require(:task_manager).permit(:content)
   end

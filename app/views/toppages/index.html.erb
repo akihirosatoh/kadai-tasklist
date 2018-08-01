@@ -3,18 +3,18 @@
   <div class="row">
     <aside class="col-md-4">
       
-<%= form_for(@task_manager) do |f| %>
+  <%= form_for(@task_manager) do |f| %>
 
         <div class="form-group">
           
-<%= f.text_area :content, class: 'form-control', rows: 5 %>
+  <%= f.text_area :content, class: 'form-control', rows: 5 %>
 
         </div>
         
-<%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+  <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
 
       
-<% end %>
+  <% end %>
 
     </aside>
     <div class="col-xs-8">
@@ -30,6 +30,7 @@
       <h1>Welcome to the Tasklists</h1>
       
 <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+<%= link_to 'Log in!', login_path, class: 'btn btn-lg btn-success' %>
 
     </div>
   </div>

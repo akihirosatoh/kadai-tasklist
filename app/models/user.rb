@@ -7,6 +7,6 @@ class User < ApplicationRecord
   
   has_secure_password
   
-  has_many :taskmanagers
+  has_many :task_managers
   
 end
