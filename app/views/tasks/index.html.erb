@@ -8,6 +8,7 @@
         <th>id</th>
         <th>ステータス</th>
         <th>タスク</th>
+        <th>ユーザID</th>
       </tr>
     </thead>
     <tbody>
@@ -25,6 +26,9 @@
           <td>
 <%= task.content %>
 </td>
+          <td>
+<%= task.user_id %>
+          </td>
         </tr>
       
 <% end %>

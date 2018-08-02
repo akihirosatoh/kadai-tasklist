@@ -1,10 +1,13 @@
 class UsersController < ApplicationController
   before_action :require_user_logged_in, only: [:index, :show]
-  def index
-  end
+#  def index
+#    @users = User.all.page(params[:page])
+#  end
 
   def show
     @user = User.find(params[:id])
+    @tasklists = @user.tasklists.order('created_at DESC').page(params[:page])
+    counts(@user)
   end
 
   def new
@@ -24,6 +27,8 @@ class UsersController < ApplicationController
     end
     
   end
+  
+
     private
 
   def user_params

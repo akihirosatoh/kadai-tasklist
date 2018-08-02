@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'task_managers/create'
+#  get 'task_managers/create'
 
-  get 'task_managers/destroy'
+#  get 'task_managers/destroy'
 
 #  get 'sessions/new'
 
@@ -28,9 +28,12 @@ Rails.application.routes.draw do
   
   get 'signup', to: 'users#new'
   get 'user', to: 'toppages#index'
+  
   resources :users, only: [:index, :new, :create]
   
-  resources :task_managers, only: [:create, :destroy, :edit]
+  resources :tasks
+
+
   
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

@@ -1,3 +1,5 @@
+<% if logged_in? %>
+
 <h1>予定作成ページ</h1>
 
 <div class="row">
@@ -24,3 +26,9 @@
 
   </div>
 </div>
+
+<% else %>
+redirect_root
+
+<% end %>
+
